@@ -1,6 +1,5 @@
 #include <iostream>
 #include <fstream>
-
 using namespace std;	
 
 
@@ -16,17 +15,15 @@ int main()
 
   double nr;
   double sum{0.0};
-  double count{0.0};
+  int count{0};
   while ( ! ifs.eof() )
   {
-
      ifs >> nr;
-     //cout << nr << endl;
      sum += nr;
-     count ++;
+     ++count;
   }
   double average = sum / count;
-
-  cout << average << endl;
   return 0;
 }
+
+//Funkar om talen ligger på varsin rad. Funkar inte om det ligger flera tal på samma rad
